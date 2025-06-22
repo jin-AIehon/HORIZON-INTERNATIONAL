@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ | HORIZON INTERNATIONAL</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">
+  <a href="index.html" class="logo-link">
+    <img src="img/logo.png" alt="HORIZONロゴ" class="logo-image" />
+    <span class="logo-text">HORIZON INTERNATIONAL</span>
+  </a>
+</h1>
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="services.html">サービス</a></li>
+          <li><a href="portfolio.html">実績</a></li>
+          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-form">
+    <div class="container">
+      <h2>お問い合わせ</h2>
+      <p>研修・コンサルティングに関するご質問・ご依頼は以下のフォームよりご連絡ください。</p>
+
+      <form action="#" method="post" id="inquiryForm">
+        <label for="name">お名前<span>*</span></label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">メールアドレス<span>*</span></label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="company">会社名</label>
+        <input type="text" id="company" name="company" />
+
+        <label for="message">お問い合わせ内容<span>*</span></label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">送信する</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 HORIZON INTERNATIONAL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
