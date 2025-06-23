@@ -261,3 +261,34 @@ table th {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+.basic-program-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.basic-program-table th,
+.basic-program-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  vertical-align: middle; /* ← これが縦中央揃え */
+  text-align: left;
+}
+
+.basic-program-table th {
+  background-color: #eaf6ff; /* より明るいブルーに変更 */
+  color: #333;               /* 文字色を濃くして視認性UP */
+  width: 20%;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.services-page h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-left: 6px solid #f27c28; /* HORIZONのオレンジカラー */
+  padding-left: 1rem;
+  margin-top: 3rem;
+  color: #333;
+}
