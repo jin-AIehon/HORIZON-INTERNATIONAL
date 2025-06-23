@@ -144,14 +144,19 @@ body {
 }
 
 .service-item {
-  width: 200px;
+  flex: 1 1 220px; /* ← 伸縮幅を持たせて行揃えが自然に */
+  max-width: 240px;
+  min-width: 180px;
   text-decoration: none;
   color: var(--text-color);
   background: #fff;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s, transform 0.3s;
+  text-align: center;
 }
+
 
 .service-item img {
   width: 100%;
