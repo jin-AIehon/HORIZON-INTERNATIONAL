@@ -18,6 +18,28 @@ body {
   margin: auto;
 }
 
+/* ヘッダー内の.containerのみにFlexboxを適用 */
+.site-header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* モバイル時はヘッダーを縦並びに変更 */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+  
+  .nav {
+    position: relative;
+  }
+}
+
 .site-header {
   background: var(--bg-color);
   border-bottom: 1px solid #ddd;
@@ -48,6 +70,9 @@ body {
   color: var(--main-color);
 }
 
+.nav {
+  position: relative;
+}
 
 .nav-list {
   list-style: none;
@@ -296,4 +321,78 @@ table th {
   padding-left: 1rem;
   margin-top: 3rem;
   color: #333;
+}
+
+/* ▼ モバイル時（768px以下）のナビ制御 */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-list li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+  }
+
+  .nav-list li:last-child a {
+    border-bottom: none;
+  }
+}
+
+/* ▼ PC表示時（769px以上）の制御 */
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    gap: 1rem;
+    width: auto;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .nav-list li a {
+    padding: 0;
+    border-bottom: none;
+    white-space: normal;
+  }
 }
