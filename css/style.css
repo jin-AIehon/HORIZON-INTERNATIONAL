@@ -396,3 +396,38 @@ table th {
     white-space: normal;
   }
 }
+
+/* 動画コンテナのレスポンシブ対応 */
+.video-container {
+  margin-top: 20px;
+}
+
+.video-item {
+  margin-bottom: 30px;
+}
+
+.video-item h5 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--main-color);
+}
+
+.video-item iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 8px;
+}
+
+/* モバイル対応：画面幅が小さい時は高さも調整 */
+@media (max-width: 768px) {
+  .video-item iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-item iframe {
+    height: 200px;
+  }
+}
