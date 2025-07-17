@@ -184,10 +184,15 @@ body {
 
 
 .service-item img {
-  width: 100%;
-  height: auto;
-  max-height: 150px;
-  margin-bottom: 1rem;
+  width: 180px;           /* 幅を固定 */
+  height: 180px;          /* 高さを固定（正方形） */
+  object-fit: contain;   /* 画像の比率を保持しつつ枠内に収める */
+  margin-bottom: 0.5rem;
+}
+
+.service-item h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .service-item:hover {
@@ -430,4 +435,5 @@ table th {
   .video-item iframe {
     height: 200px;
   }
-}
+}f
+
